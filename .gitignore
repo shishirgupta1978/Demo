@@ -1,4 +1,7 @@
 **/.venv/
 **/__pycache__/
 **/migrations/
-./env.json
+env.json
+backend/universal.db
+backend/media/*
+backend/prod.env

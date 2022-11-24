@@ -1,0 +1,98 @@
+{
+        "ENV_TYPE": [
+            "production",
+            "development"
+        ],
+        "SECRET_KEY": [
+            "**",
+            "**"
+        ],
+        "DEBUG": [
+            "0",
+            "1"
+        ],
+        "REDIS_HOST":[
+        "127.0.0.1",
+        "127.0.0.1"
+        ],
+        
+        "REDIS_PORT":[
+        "6379",
+        "6379"
+        ],
+        "ALLOWED_HOSTS": [
+            "localhost,127.0.0.1",
+            "localhost,127.0.0.1"
+        ],
+        "CSRF_TRUSTED_ORIGINS": [
+            "http://localhost, http://127.0.0.1",
+            "http://localhost, http://127.0.0.1"
+        ],
+        
+        "DB_ENGINE": [
+            "django.db.backends.postgresql",
+            "django.db.backends.sqlite3"
+        ],
+        "DB_DATABASE": [
+            "universal",
+            "universal.db"
+        ],
+        "DB_USER": [
+            "user1",
+            "user1"
+        ],
+        "DB_PASSWORD": [
+            "**",
+            "**"
+        ],
+        "DB_HOST": [
+            "http://127.0.0.1",
+            "http://127.0.0.1"
+        ],
+        "DB_PORT": [
+            "5432",
+            "5432"
+        ],
+        "EMAIL_BACKEND": [
+            "django.core.mail.backends.smtp.EmailBackend",
+            "django.core.mail.backends.smtp.EmailBackend"
+        ],
+        "EMAIL_HOST": [
+            "**",
+            "**"
+        ],
+        "EMAIL_USE_TLS": [
+            "1",
+            "1"
+        ],
+        "EMAIL_PORT": [
+            "**",
+            "**"
+        ],
+        "EMAIL_HOST_USER": [
+            "**",
+            "**"
+        ],
+        "EMAIL_HOST_PASSWORD": [
+            "**",
+            "**"
+        ],
+        "DEFAULT_FROM_EMAIL": [
+            "xxxxx@gmail.com",
+            "xxxxx@gmail.com"
+        ],
+        "DOMAIN": [
+            "127.0.0.1:3000",
+            "127.0.0.1:3000"
+        ],
+        "SITE_NAME": [
+            "SUPPORT",
+            "SUPPORT"
+        ],
+        "RAZOR_PAY_KEY": ["**","**"],
+        "RAZOR_PAY_SECRET_KEY": ["**","**"],
+        "CELERY_BROKER_URL": ["redis://127.0.0.1:6379","redis://127.0.0.1:6379"],
+        "ACCESS_TOKEN_LIFETIME_MINUTES": ["35","35"],
+        "REFRESH_TOKEN_LIFETIME_DAYS": ["1","1"]
+    }
+

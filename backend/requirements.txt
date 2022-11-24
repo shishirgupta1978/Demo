@@ -1,0 +1,13 @@
+Django
+django-environ
+djoser
+dj-database-url
+djangorestframework
+djangorestframework-simplejwt
+django-cors-headers
+psycopg2-binary
+Pillow
+selenium
+celery
+django-celery-beat
+django-celery-results
