@@ -16,6 +16,7 @@ class ProfileAPIView(APIView):
     permission_classes= [permissions.IsAuthenticated]
     def get_object(self,request):
         try:
+            print(request)
             return Profile.objects.get(user = request.user.id)
         except Profile.DoesNotExist:
             raise Http404

@@ -9,6 +9,11 @@ from rest_framework import permissions
 from .models import Department,Ticket,Note
 from .serializers import DepartmentSerializer,TicketSerializer,NoteSerializer
 from rest_framework.pagination import PageNumberPagination
+from .tasks import send_email
+from django_celery_beat.models import PeriodicTask,CrontabSchedule
+import json
+
+
 
 class TicketViewSet(viewsets.ModelViewSet):
     queryset = Ticket.objects.filter().order_by("-id")
@@ -50,9 +55,13 @@ class TicketListAPIView(APIView, PageNumberPagination):
         '''
         serializer = TicketSerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save()
+            ticket=serializer.save()
+            dep =request.data.get("department")
+            users=Department.objects.get(id=dep).users.all()
+            email_lst=[user.email for user in users]
+            send_email.delay(subject=f"Helpdesk Support ticket #{ticket.id}: {ticket.title}",message=f"Ticket id #{ticket.id}\n\n{request.data.get('description')}",recipient_list=email_lst)
+                
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
  
     def put(self, request, *args, **kwargs):
@@ -150,9 +159,20 @@ class NoteListAPIView(APIView):
         '''
         Create the Ticket with given ticket data
         '''
+        
         serializer = NoteSerializer(data=request.data)
+        
+        ticket=Ticket.objects.get(pk=request.data.get('ticket'))
+        if(request.user.id!=ticket.user.id):
+            ticket.assign_to=request.user
+            ticket.save()
+
+        
+        
+
+
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-
+        
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

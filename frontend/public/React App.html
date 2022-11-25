@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)http://localhost:3000/crud -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <link href="./React App_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./React App_files/all.css">
+        <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <script defer="" src="./React App_files/bundle.js"></script><style>body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxTQUFTO0VBQ1Q7O2NBRVk7RUFDWixtQ0FBbUM7RUFDbkMsa0NBQWtDO0FBQ3BDOztBQUVBO0VBQ0U7YUFDVztBQUNiIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gIG1hcmdpbjogMDtcbiAgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJ1NlZ29lIFVJJywgJ1JvYm90bycsICdPeHlnZW4nLFxuICAgICdVYnVudHUnLCAnQ2FudGFyZWxsJywgJ0ZpcmEgU2FucycsICdEcm9pZCBTYW5zJywgJ0hlbHZldGljYSBOZXVlJyxcbiAgICBzYW5zLXNlcmlmO1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcbn1cblxuY29kZSB7XG4gIGZvbnQtZmFtaWx5OiBzb3VyY2UtY29kZS1wcm8sIE1lbmxvLCBNb25hY28sIENvbnNvbGFzLCAnQ291cmllciBOZXcnLFxuICAgIG1vbm9zcGFjZTtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>header{
+  background-color:#F0F0F0 ;
+  color: black;
+  padding: 12px;
+
+}
+
+header a{
+  color:rgb(104, 112, 104);
+  text-decoration: none;
+  margin-left:12px;
+  
+  padding:10px;
+ 
+
+}
+header a:hover,a:active,.active{
+  border-radius: 10%;
+
+color: black
+ 
+ }
+
+main form{
+  color:rgb(104, 112, 104);
+  background-color: #F0F0F0 ;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding:10px;
+  width: 350px;
+  border: 1px solid gainsboro;
+  border-radius: 2%;
+}
+.dashboard{
+  height: 540px;
+  }
+
+.resp{
+  max-height:200px;
+}
+.sidebar{
+
+padding: 0;
+padding-left: 11px;
+    background-color: #111; /* Black*/
+   /* Disable horizontal scroll */
+  /* Place content 60px from the top */
+  /* 0.5 second transition effect to slide in the sidenav */
+
+}
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.sidebar a {
+  
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  border-bottom: 1px solid #818181;
+  background-color: #61dafb ;
+  display: block;
+  padding:12px;
+  margin:0;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+table, tr td {
+  border: 1px solid honeydew
+}
+tbody {
+  display: block;
+  height: 325px;
+  overflow: auto;
+}
+thead, tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;/* even columns width , fix width of table too*/
+}
+thead {
+  width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+}
+table {
+  width: 400px;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9BcHAuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UseUJBQXlCO0VBQ3pCLFlBQVk7RUFDWixhQUFhOztBQUVmOztBQUVBO0VBQ0Usd0JBQXdCO0VBQ3hCLHFCQUFxQjtFQUNyQixnQkFBZ0I7O0VBRWhCLFlBQVk7OztBQUdkO0FBQ0E7RUFDRSxrQkFBa0I7O0FBRXBCOztDQUVDOztBQUVEO0VBQ0Usd0JBQXdCO0VBQ3hCLDBCQUEwQjtFQUMxQixnQkFBZ0I7RUFDaEIsbUJBQW1CO0VBQ25CLFlBQVk7RUFDWixZQUFZO0VBQ1osMkJBQTJCO0VBQzNCLGlCQUFpQjtBQUNuQjtBQUNBO0VBQ0UsYUFBYTtFQUNiOztBQUVGO0VBQ0UsZ0JBQWdCO0FBQ2xCO0FBQ0E7O0FBRUEsVUFBVTtBQUNWLGtCQUFrQjtJQUNkLHNCQUFzQixFQUFFLFNBQVM7R0FDbEMsOEJBQThCO0VBQy9CLG9DQUFvQztFQUNwQyx5REFBeUQ7O0FBRTNEO0FBQ0E7RUFDRSxzQkFBc0I7RUFDdEIsV0FBVztFQUNYLFlBQVk7RUFDWixrQkFBa0I7QUFDcEI7QUFDQTs7RUFFRSxxQkFBcUI7RUFDckIsZUFBZTtFQUNmLGNBQWM7RUFDZCxnQ0FBZ0M7RUFDaEMsMEJBQTBCO0VBQzFCLGNBQWM7RUFDZCxZQUFZO0VBQ1osUUFBUTtBQUNWOztBQUVBO0VBQ0Usa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsY0FBYztFQUNkLG9CQUFvQjtBQUN0Qjs7QUFFQTtFQUNFO0lBQ0UsNENBQTRDO0VBQzlDO0FBQ0Y7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsaUJBQWlCO0VBQ2pCLGFBQWE7RUFDYixzQkFBc0I7RUFDdEIsbUJBQW1CO0VBQ25CLHVCQUF1QjtFQUN2Qiw2QkFBNkI7RUFDN0IsWUFBWTtBQUNkOztBQUVBO0VBQ0UsY0FBYztBQUNoQjs7QUFFQTtFQUNFO0lBQ0UsdUJBQXVCO0VBQ3pCO0VBQ0E7SUFDRSx5QkFBeUI7RUFDM0I7QUFDRjs7QUFFQTtFQUNFO0FBQ0Y7QUFDQTtFQUNFLGNBQWM7RUFDZCxhQUFhO0VBQ2IsY0FBYztBQUNoQjtBQUNBO0VBQ0UsY0FBYztFQUNkLFdBQVc7RUFDWCxtQkFBbUIsQ0FBQywrQ0FBK0M7QUFDckU7QUFDQTtFQUNFLHdCQUF3QixDQUFDLG9FQUFvRTtBQUMvRjtBQUNBO0VBQ0UsWUFBWTtBQUNkIiwic291cmNlc0NvbnRlbnQiOlsiaGVhZGVye1xuICBiYWNrZ3JvdW5kLWNvbG9yOiNGMEYwRjAgO1xuICBjb2xvcjogYmxhY2s7XG4gIHBhZGRpbmc6IDEycHg7XG5cbn1cblxuaGVhZGVyIGF7XG4gIGNvbG9yOnJnYigxMDQsIDExMiwgMTA0KTtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICBtYXJnaW4tbGVmdDoxMnB4O1xuICBcbiAgcGFkZGluZzoxMHB4O1xuIFxuXG59XG5oZWFkZXIgYTpob3ZlcixhOmFjdGl2ZSwuYWN0aXZle1xuICBib3JkZXItcmFkaXVzOiAxMCU7XG5cbmNvbG9yOiBibGFja1xuIFxuIH1cblxubWFpbiBmb3Jte1xuICBjb2xvcjpyZ2IoMTA0LCAxMTIsIDEwNCk7XG4gIGJhY2tncm91bmQtY29sb3I6ICNGMEYwRjAgO1xuICBtYXJnaW4tdG9wOiAyMHB4O1xuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xuICBwYWRkaW5nOjEwcHg7XG4gIHdpZHRoOiAzNTBweDtcbiAgYm9yZGVyOiAxcHggc29saWQgZ2FpbnNib3JvO1xuICBib3JkZXItcmFkaXVzOiAyJTtcbn1cbi5kYXNoYm9hcmR7XG4gIGhlaWdodDogNTQwcHg7XG4gIH1cblxuLnJlc3B7XG4gIG1heC1oZWlnaHQ6MjAwcHg7XG59XG4uc2lkZWJhcntcblxucGFkZGluZzogMDtcbnBhZGRpbmctbGVmdDogMTFweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTExOyAvKiBCbGFjayovXG4gICAvKiBEaXNhYmxlIGhvcml6b250YWwgc2Nyb2xsICovXG4gIC8qIFBsYWNlIGNvbnRlbnQgNjBweCBmcm9tIHRoZSB0b3AgKi9cbiAgLyogMC41IHNlY29uZCB0cmFuc2l0aW9uIGVmZmVjdCB0byBzbGlkZSBpbiB0aGUgc2lkZW5hdiAqL1xuXG59XG4uYXZhdGFyIHtcbiAgdmVydGljYWwtYWxpZ246IG1pZGRsZTtcbiAgd2lkdGg6IDUwcHg7XG4gIGhlaWdodDogNTBweDtcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xufVxuLnNpZGViYXIgYSB7XG4gIFxuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gIGZvbnQtc2l6ZTogMjVweDtcbiAgY29sb3I6ICM4MTgxODE7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjODE4MTgxO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjNjFkYWZiIDtcbiAgZGlzcGxheTogYmxvY2s7XG4gIHBhZGRpbmc6MTJweDtcbiAgbWFyZ2luOjA7XG59XG5cbi5BcHAge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5BcHAtbG9nbyB7XG4gIGhlaWdodDogNDB2bWluO1xuICBwb2ludGVyLWV2ZW50czogbm9uZTtcbn1cblxuQG1lZGlhIChwcmVmZXJzLXJlZHVjZWQtbW90aW9uOiBuby1wcmVmZXJlbmNlKSB7XG4gIC5BcHAtbG9nbyB7XG4gICAgYW5pbWF0aW9uOiBBcHAtbG9nby1zcGluIGluZmluaXRlIDIwcyBsaW5lYXI7XG4gIH1cbn1cblxuLkFwcC1oZWFkZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjgyYzM0O1xuICBtaW4taGVpZ2h0OiAxMDB2aDtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGZvbnQtc2l6ZTogY2FsYygxMHB4ICsgMnZtaW4pO1xuICBjb2xvcjogd2hpdGU7XG59XG5cbi5BcHAtbGluayB7XG4gIGNvbG9yOiAjNjFkYWZiO1xufVxuXG5Aa2V5ZnJhbWVzIEFwcC1sb2dvLXNwaW4ge1xuICBmcm9tIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTtcbiAgfVxuICB0byB7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTtcbiAgfVxufVxuXG50YWJsZSwgdHIgdGQge1xuICBib3JkZXI6IDFweCBzb2xpZCBob25leWRld1xufVxudGJvZHkge1xuICBkaXNwbGF5OiBibG9jaztcbiAgaGVpZ2h0OiAzMjVweDtcbiAgb3ZlcmZsb3c6IGF1dG87XG59XG50aGVhZCwgdGJvZHkgdHIge1xuICBkaXNwbGF5OiB0YWJsZTtcbiAgd2lkdGg6IDEwMCU7XG4gIHRhYmxlLWxheW91dDogZml4ZWQ7LyogZXZlbiBjb2x1bW5zIHdpZHRoICwgZml4IHdpZHRoIG9mIHRhYmxlIHRvbyovXG59XG50aGVhZCB7XG4gIHdpZHRoOiBjYWxjKCAxMDAlIC0gMWVtICkvKiBzY3JvbGxiYXIgaXMgYXZlcmFnZSAxZW0vMTZweCB3aWR0aCwgcmVtb3ZlIGl0IGZyb20gdGhlYWQgd2lkdGggKi9cbn1cbnRhYmxlIHtcbiAgd2lkdGg6IDQwMHB4O1xufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><header class="container-fluid"><div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"><img width="80" height="43" src="./React App_files/logo.jpg"><ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"><li><a class="" href="http://localhost:3000/products">Products</a></li><li><a class="" href="http://localhost:3000/contactus">Contact Us</a></li><li><a class="" href="http://localhost:3000/aboutus">About Us</a></li><li><a aria-current="page" class="active" href="http://localhost:3000/crud">Crud</a></li><li><a class="" href="http://localhost:3000/cart">Cart 0</a></li></ul><form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3"><input type="search" class="form-control" placeholder="Search..." aria-label="Search"></form><a class="" href="http://localhost:3000/auth/login">Login</a></div></header><main><div class="row"><div class="col-4"><form class="mx-3"><div class="d-flex justify-content-center mb-3"><label for="profile_pic"><img alt="ProfilePic" style="width: 100px; height: 100px;" src="./React App_files/IMG_20220717_163233.jpg"></label><input type="file" accept="image/png, image/jpeg" id="profile_pic" name="profile_pic" style="visibility: hidden;"></div><input class="form-control mb-3" type="text" id="name" name="name" placeholder="name" required="" value=""><input class="form-control mb-3" type="text" id="father_name" name="father_name" placeholder="Father name" required="" value=""><input class="form-control mb-3" type="text" id="age" name="age" placeholder="Age" required="" value=""><input type="file" class="form-control mb-3" id="document" name="document" required=""><div class="d-flex justify-content-end mb-3"></div><div class="d-flex justify-content-center"><input type="submit" value="Add"></div></form></div><div class="col-8"><div class="m-3 d-flex justify-content-end"><input type="text" class="w-50" id="search" name="search" placeholder="Search..."></div><div><table class="table  "><thead><tr><th>ID</th><th>Profile Pic</th><th>Name</th><th>Father Name</th><th>Age</th><th>Documents</th><th colspan="2">Action</th></tr></thead><tbody><tr><td>1</td><td><img src="./React App_files/logo_juC5hVZ.jpg" class="avatar"></td><td>shishir</td><td>kgsdd</td><td>344</td><td><a href="http://127.0.0.1:8000/media/student_documents/App_hqJfxx5.css">Download</a></td><td colspan="2"><button>Delete </button> <button>Edit </button></td></tr><tr><td>63</td><td><img src="./React App_files/IMG_20220717_163233_cfsFDSi.jpg" class="avatar"></td><td>ram</td><td>nnyds</td><td>4545</td><td><a href="http://127.0.0.1:8000/media/student_documents/Register_H9ubrzi.jsx">Download</a></td><td colspan="2"><button>Delete </button> <button>Edit </button></td></tr><tr><td>64</td><td><img src="./React App_files/IMG_20220717_163233_ruWeQD9.jpg" class="avatar"></td><td>ghgh</td><td>nnn</td><td>45</td><td><a href="http://127.0.0.1:8000/media/student_documents/env_9qECyUO.json">Download</a></td><td colspan="2"><button>Delete </button> <button>Edit </button></td></tr></tbody></table></div></div></div></main></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <script src="./React App_files/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+
+</body></html>
